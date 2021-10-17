@@ -18,6 +18,7 @@
 #include "displayapp/screens/InfiniPaint.h"
 #include "displayapp/screens/Paddle.h"
 #include "displayapp/screens/StopWatch.h"
+#include "displayapp/screens/Marker.h"
 #include "displayapp/screens/Meter.h"
 #include "displayapp/screens/Metronome.h"
 #include "displayapp/screens/Music.h"
@@ -427,6 +428,9 @@ void DisplayApp::LoadApp(Apps app, DisplayApp::FullRefreshDirections direction) 
     case Apps::Metronome:
       currentScreen = std::make_unique<Screens::Metronome>(this, motorController, *systemTask);
       ReturnApp(Apps::Launcher, FullRefreshDirections::Down, TouchEvents::None);
+      break;
+    case Apps::Marker:
+      currentScreen = std::make_unique<Screens::Marker>(this);
       break;
     case Apps::Motion:
       currentScreen = std::make_unique<Screens::Motion>(this, motionController);
