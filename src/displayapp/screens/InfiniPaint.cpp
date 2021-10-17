@@ -1,11 +1,15 @@
 #include "InfiniPaint.h"
+#include <lvgl/lvgl.h>
 #include "../DisplayApp.h"
 #include "../LittleVgl.h"
 
 using namespace Pinetime::Applications::Screens;
 
-InfiniPaint::InfiniPaint(Pinetime::Applications::DisplayApp* app, Pinetime::Components::LittleVgl& lvgl) 
+InfiniPaint::InfiniPaint(Pinetime::Applications::DisplayApp* app, 
+                         Controllers::MotionController& motionController
+                         Pinetime::Components::LittleVgl& lvgl) 
   : Screen(app), motionController {motionController}, lvgl {lvgl} {
+    
   std::fill(b, b + bufferSize, selectColor);
 }
 

@@ -9,6 +9,9 @@ namespace Pinetime {
   namespace Components {
     class LittleVgl;
   }
+  // namespace Controllers {
+  //   class MotionController
+  // }
   namespace Applications {
     namespace Screens {
 
@@ -25,10 +28,13 @@ namespace Pinetime {
       private:
         Controllers::MotionController& motionController;
         Pinetime::Components::LittleVgl& lvgl;
+
         static constexpr uint16_t width = 30;
         static constexpr uint16_t height = 10;
         static constexpr uint16_t bufferSize = width * height;
+
         lv_color_t b[bufferSize];
+        
         lv_color_t selectColor = LV_COLOR_WHITE;
         uint8_t color = 2;
       };
