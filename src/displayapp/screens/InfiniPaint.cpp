@@ -4,7 +4,8 @@
 
 using namespace Pinetime::Applications::Screens;
 
-InfiniPaint::InfiniPaint(Pinetime::Applications::DisplayApp* app, Pinetime::Components::LittleVgl& lvgl) : Screen(app), lvgl {lvgl} {
+InfiniPaint::InfiniPaint(Pinetime::Applications::DisplayApp* app, Pinetime::Components::LittleVgl& lvgl) 
+  : Screen(app), motionController {motionController}, lvgl {lvgl} {
   std::fill(b, b + bufferSize, selectColor);
 }
 
