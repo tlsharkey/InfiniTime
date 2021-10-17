@@ -23,7 +23,7 @@ namespace Pinetime {
 
       private:
         Pinetime::Components::LittleVgl& lvgl;
-        static constexpr uint16_t width = 10;
+        static constexpr uint16_t width = 30;
         static constexpr uint16_t height = 10;
         static constexpr uint16_t bufferSize = width * height;
         lv_color_t b[bufferSize];
