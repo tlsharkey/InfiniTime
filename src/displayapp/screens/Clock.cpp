@@ -13,7 +13,7 @@
 
 using namespace Pinetime::Applications::Screens;
 
-Clock::Clock(DisplayApp* app,
+Clock::Clock(DisplayApp* app, // comment
              Controllers::DateTime& dateTimeController,
              Controllers::Battery& batteryController,
              Controllers::Ble& bleController,
